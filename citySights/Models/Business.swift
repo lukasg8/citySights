@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Business: Decodable, Identifiable {
+class Business: Decodable, Identifiable, ObservableObject {
+    
+    @Published var imageData: Data?
     
     var id: String?
     var alias: String?
@@ -25,6 +27,54 @@ struct Business: Decodable, Identifiable {
     var phone: String?
     var display_phone: String?
     var distance: Double?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case alias
+        case name
+        case image_url
+        case is_closed
+        case url
+        case review_count
+        case categories
+        case rating
+        case coordinates
+        case transactions
+        case price
+        case location
+        case phone
+        case display_phone
+        case distance
+    }
+    
+    
+    func getImageData() {
+
+        // check image url is not nil
+        guard image_url != nil else {
+            return
+        }
+
+        // download data for image
+        if let url = URL(string: image_url!) {
+
+            // get a session
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: url) { (data, response, error) in
+                DispatchQueue.main.async {
+                    if error == nil {
+                        self.imageData = data!
+                    }
+                }
+            }
+
+            dataTask.resume()
+
+        }
+
+    }
+    
+    
 }
 
 struct Location: Decodable {
@@ -36,6 +86,7 @@ struct Location: Decodable {
     var country: String?
     var state: String?
     var display_address: [String]?
+    
 }
 
 struct Category: Decodable {

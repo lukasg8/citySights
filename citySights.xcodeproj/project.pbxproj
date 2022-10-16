@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C008BE828FB958C007F651B /* BusinessRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C008BE728FB958C007F651B /* BusinessRow.swift */; };
 		6CA8CCFD28FB77E300243D66 /* BusinessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA8CCFC28FB77E300243D66 /* BusinessList.swift */; };
 		6CA8CCFF28FB79C300243D66 /* BusinessSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA8CCFE28FB79C300243D66 /* BusinessSectionHeader.swift */; };
 		6CA8CD0128FB7A6700243D66 /* BusinessSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA8CD0028FB7A6700243D66 /* BusinessSection.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C008BE728FB958C007F651B /* BusinessRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessRow.swift; sourceTree = "<group>"; };
 		6CA8CCFC28FB77E300243D66 /* BusinessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessList.swift; sourceTree = "<group>"; };
 		6CA8CCFE28FB79C300243D66 /* BusinessSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSectionHeader.swift; sourceTree = "<group>"; };
 		6CA8CD0028FB7A6700243D66 /* BusinessSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSection.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 				6CA8CCFC28FB77E300243D66 /* BusinessList.swift */,
 				6CA8CCFE28FB79C300243D66 /* BusinessSectionHeader.swift */,
 				6CA8CD0028FB7A6700243D66 /* BusinessSection.swift */,
+				6C008BE728FB958C007F651B /* BusinessRow.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CDB2CD228FB6DCC00329BDD /* LaunchView.swift in Sources */,
+				6C008BE828FB958C007F651B /* BusinessRow.swift in Sources */,
 				6CDB2CEE28FB743200329BDD /* HomeView.swift in Sources */,
 				6CDB2CE428FB6F6800329BDD /* Business.swift in Sources */,
 				6CA8CCFF28FB79C300243D66 /* BusinessSectionHeader.swift in Sources */,
