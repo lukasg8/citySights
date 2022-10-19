@@ -21,6 +21,7 @@
 		6CDB2CE828FB6FF900329BDD /* ContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CE728FB6FF900329BDD /* ContentModel.swift */; };
 		6CDB2CEC28FB719700329BDD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CEB28FB719700329BDD /* Constants.swift */; };
 		6CDB2CEE28FB743200329BDD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDB2CED28FB743200329BDD /* HomeView.swift */; };
+		6CE4148528FFC6B40087D623 /* BusinessMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE4148428FFC6B40087D623 /* BusinessMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		6CDB2CE728FB6FF900329BDD /* ContentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentModel.swift; sourceTree = "<group>"; };
 		6CDB2CEB28FB719700329BDD /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6CDB2CED28FB743200329BDD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6CE4148428FFC6B40087D623 /* BusinessMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,9 +150,18 @@
 			isa = PBXGroup;
 			children = (
 				6CDB2CED28FB743200329BDD /* HomeView.swift */,
+				6CE4148328FFC69D0087D623 /* Map */,
 				6CA8CCFB28FB77D400243D66 /* List */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		6CE4148328FFC69D0087D623 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6CE4148428FFC6B40087D623 /* BusinessMap.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +243,7 @@
 				6C29F2FE28FBA58B00F23585 /* BusinessDetail.swift in Sources */,
 				6CDB2CE628FB6F8600329BDD /* BusinessSearch.swift in Sources */,
 				6CA8CCFD28FB77E300243D66 /* BusinessList.swift in Sources */,
+				6CE4148528FFC6B40087D623 /* BusinessMap.swift in Sources */,
 				6CA8CD0128FB7A6700243D66 /* BusinessSection.swift in Sources */,
 				6CDB2CE828FB6FF900329BDD /* ContentModel.swift in Sources */,
 				6CDB2CEC28FB719700329BDD /* Constants.swift in Sources */,
