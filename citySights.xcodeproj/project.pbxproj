@@ -69,7 +69,6 @@
 				6CA8CCFE28FB79C300243D66 /* BusinessSectionHeader.swift */,
 				6CA8CD0028FB7A6700243D66 /* BusinessSection.swift */,
 				6C008BE728FB958C007F651B /* BusinessRow.swift */,
-				6C29F2FC28FBA57700F23585 /* Detail */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -150,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				6CDB2CED28FB743200329BDD /* HomeView.swift */,
+				6C29F2FC28FBA57700F23585 /* Detail */,
 				6CE4148328FFC69D0087D623 /* Map */,
 				6CA8CCFB28FB77D400243D66 /* List */,
 			);
