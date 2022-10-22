@@ -32,6 +32,10 @@ struct DirectionsMap: UIViewRepresentable {
         let map = MKMapView()
         map.delegate = context.coordinator
         
+        // show user location
+        map.showsUserLocation = true
+        map.userTrackingMode = .followWithHeading
+        
         // create directions request
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: start))
@@ -49,22 +53,27 @@ struct DirectionsMap: UIViewRepresentable {
                     map.addOverlay(route.polyline)
                     
                     // zoom into region
-                    map.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
-
+                    map.setVisibleMapRect(route.polyline.boundingMapRect, edgePadding: UIEdgeInsets(top: 100, left: 100, bottom: 100, right: 100), animated: true)
                 }
             }
             
         }
         
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = end
+        annotation.title = business.name ?? ""
+        map.addAnnotation(annotation)
+        
         return map
     }
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
-        
+        // don't need to update like BusinessMap since we already have business we want to show
     }
     
     static func dismantleUIView(_ uiView: MKMapView, coordinator: ()) {
-        
+        uiView.removeAnnotations(uiView.annotations)
+        uiView.removeOverlays(uiView.overlays)
     }
     
     // MARK: - Coordinator
@@ -78,7 +87,7 @@ struct DirectionsMap: UIViewRepresentable {
             
             let renderer = MKPolylineRenderer(polyline: overlay as! MKPolyline)
             
-            renderer.lineWidth = 6
+            renderer.lineWidth = 10
             renderer.strokeColor = .blue
             
             return renderer
