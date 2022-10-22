@@ -27,7 +27,7 @@ struct HomeView: View {
                         HStack {
                             
                             Image(systemName: "location")
-                            Text("San Francisco")
+                            Text(model.placemark?.locality ?? "")
                             Spacer()
                             Button("Switch to map view") {
                                 self.isMapShowing = true
@@ -36,8 +36,17 @@ struct HomeView: View {
                         }
                         Divider()
                         
-                        BusinessList()
-                        
+                        ZStack (alignment: .top) {
+                            BusinessList()
+                            
+                            HStack {
+                                Spacer()
+                                YelpAttribution(link:"https://yelp.com")
+                            }
+                            .padding(.trailing, -20)
+                            
+                            
+                        }
                     }
                     .padding([.horizontal,.top])
                     .toolbar(.hidden)
@@ -61,7 +70,7 @@ struct HomeView: View {
                                 .frame(height:48)
                             HStack {
                                 Image(systemName: "location")
-                                Text("San Francisco")
+                                Text(model.placemark?.locality ?? "")
                                 Spacer()
                                 Button("Switch to list view") {
                                     self.isMapShowing = false
